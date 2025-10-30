@@ -1,0 +1,62 @@
+/* Modern CSS Reset with L3UI enhancements */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--ld-font-sans);
+  line-height: var(--ld-leading-normal);
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--ld-bg);
+  color: var(--ld-text);
+  font-size: var(--ld-text-base);
+  font-weight: var(--ld-font-normal);
+  min-height: 100vh;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--ld-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Selection styles */
+::selection {
+  background-color: var(--ld-brand-200);
+  color: var(--ld-text);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ld-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ld-sage-300);
+  border-radius: var(--ld-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ld-sage-400);
+}
