@@ -1,0 +1,127 @@
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  
+  /* ===== COLOR TOKENS ===== */
+  /* Background & Surface */
+  --ld-bg: var(--ld-sage-950);
+  --ld-surface: var(--ld-sage-800);
+  --ld-surface-elevated: var(--ld-sage-700);
+  
+  /* Text */
+  --ld-text: var(--ld-sage-50);
+  --ld-text-muted: var(--ld-sage-300);
+  --ld-text-light: var(--ld-sage-400);
+  --ld-text-on-brand: var(--ld-sage-50);
+  
+  /* Border & Divider */
+  --ld-border: rgba(255, 255, 255, 0.08);
+  --ld-border-strong: rgba(255, 255, 255, 0.12);
+  --ld-divider: rgba(255, 255, 255, 0.06);
+  
+  /* Interaction States */
+  --ld-hover: rgba(255, 255, 255, 0.05);
+  --ld-active: rgba(255, 255, 255, 0.08);
+  --ld-focus-ring: rgba(135, 163, 143, 0.4);
+  --ld-overlay: rgba(0, 0, 0, 0.6);
+  
+  /* Brand Colors (adjusted for dark theme) */
+  --ld-brand: #87a38f;
+  --ld-brand-50: rgba(135, 163, 143, 0.1);
+  --ld-brand-100: rgba(135, 163, 143, 0.2);
+  --ld-brand-200: rgba(135, 163, 143, 0.3);
+  --ld-brand-300: rgba(135, 163, 143, 0.4);
+  --ld-brand-400: rgba(135, 163, 143, 0.5);
+  --ld-brand-500: rgba(135, 163, 143, 0.6);
+  --ld-brand-600: #87a38f;
+  --ld-brand-700: #9ab5a3;
+  --ld-brand-800: #adc7b7;
+  --ld-brand-900: #c0d9cb;
+  
+  /* Status Colors */
+  --ld-success: #34d399;
+  --ld-success-light: rgba(52, 211, 153, 0.1);
+  --ld-warning: #fbbf24;
+  --ld-warning-light: rgba(251, 191, 36, 0.1);
+  --ld-error: #f87171;
+  --ld-error-light: rgba(248, 113, 113, 0.1);
+  --ld-info: #87a38f;
+  --ld-info-light: rgba(135, 163, 143, 0.1);
+  
+  /* ===== ELEVATION ===== */
+  --ld-elev-0: none;
+  --ld-elev-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --ld-elev-2: 0 4px 8px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+  --ld-elev-3: 0 10px 20px rgba(0, 0, 0, 0.25), 0 4px 8px rgba(0, 0, 0, 0.15);
+  --ld-elev-4: 0 20px 40px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2);
+  --ld-elev-5: 0 32px 64px rgba(0, 0, 0, 0.35), 0 12px 24px rgba(0, 0, 0, 0.25);
+  
+  /* ===== COMPONENT SPECIFIC ===== */
+  --ld-skel: rgba(255, 255, 255, 0.05);
+  --ld-skel-wave: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+}
+
+/* Dark theme specific adjustments */
+:root[data-theme="dark"] .ld-card--outline {
+  border-color: var(--ld-border);
+  background: var(--ld-surface);
+}
+
+:root[data-theme="dark"] .ld-btn--secondary {
+  background: var(--ld-surface);
+  border-color: var(--ld-border);
+}
+
+:root[data-theme="dark"] .ld-btn--ghost:hover:not(:disabled) {
+  background: var(--ld-hover);
+}
+
+:root[data-theme="dark"] .ld-input {
+  background: var(--ld-surface);
+  border-color: var(--ld-border);
+}
+
+:root[data-theme="dark"] .ld-input:focus {
+  border-color: var(--ld-brand-400);
+}
+
+:root[data-theme="dark"] code {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--ld-sage-200);
+}
+
+:root[data-theme="dark"] pre {
+  background: var(--ld-sage-900);
+  color: var(--ld-sage-100);
+}
+
+:root[data-theme="dark"] th {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme="dark"] .ld-nav__dropdown-menu {
+  background: var(--ld-surface-elevated);
+  border-color: var(--ld-border);
+}
+
+:root[data-theme="dark"] .ld-sidebar {
+  background: var(--ld-surface-elevated);
+  border-right-color: var(--ld-border);
+}
+
+/* Scrollbar for dark theme */
+:root[data-theme="dark"]::-webkit-scrollbar-track {
+  background: var(--ld-sage-900);
+}
+
+:root[data-theme="dark"]::-webkit-scrollbar-thumb {
+  background: var(--ld-sage-600);
+}
+
+:root[data-theme="dark"]::-webkit-scrollbar-thumb:hover {
+  background: var(--ld-sage-500);
+}
