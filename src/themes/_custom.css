@@ -1,0 +1,50 @@
+/* Custom theme utility classes */
+
+/* Color scheme utilities */
+.ld-theme-auto {
+  color-scheme: light dark;
+}
+
+.ld-theme-light {
+  color-scheme: light;
+}
+
+.ld-theme-dark {
+  color-scheme: dark;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --ld-border: var(--ld-sage-900);
+    --ld-border-strong: var(--ld-sage-950);
+    --ld-focus-ring: var(--ld-sage-900);
+  }
+  
+  .ld-btn {
+    border-width: 2px;
+  }
+  
+  .ld-input {
+    border-width: 2px;
+  }
+}
+
+/* Reduced transparency */
+@media (prefers-reduced-transparency: reduce) {
+  .ld-backdrop {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  :root[data-theme="dark"] .ld-backdrop {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* Custom theme variables for runtime theming */
+.ld-theme-custom {
+  /* These will be set via JavaScript */
+  --ld-brand: initial;
+  --ld-radius: initial;
+  --ld-font: initial;
+}
