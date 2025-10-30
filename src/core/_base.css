@@ -1,0 +1,140 @@
+/* Base element styles using L3UI tokens */
+html {
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--ld-font);
+  line-height: var(--ld-leading-normal);
+  background: var(--ld-bg);
+  color: var(--ld-text);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--ld-font-semibold);
+  line-height: var(--ld-leading-tight);
+  margin-bottom: var(--ld-space-4);
+  color: var(--ld-text);
+}
+
+h1 { 
+  font-size: var(--ld-text-4xl);
+  font-weight: var(--ld-font-bold);
+}
+
+h2 { 
+  font-size: var(--ld-text-3xl);
+}
+
+h3 { 
+  font-size: var(--ld-text-2xl);
+}
+
+h4 { 
+  font-size: var(--ld-text-xl);
+}
+
+h5 { 
+  font-size: var(--ld-text-lg);
+}
+
+h6 { 
+  font-size: var(--ld-text-base);
+}
+
+p {
+  margin-bottom: var(--ld-space-4);
+  line-height: var(--ld-leading-relaxed);
+}
+
+a {
+  color: var(--ld-brand-600);
+  text-decoration: none;
+  transition: color var(--ld-dur-fast) var(--ld-ease-quick);
+}
+
+a:hover {
+  color: var(--ld-brand-700);
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: var(--ld-space-4);
+  padding-left: var(--ld-space-6);
+}
+
+li {
+  margin-bottom: var(--ld-space-2);
+}
+
+/* Code */
+code {
+  font-family: var(--ld-font-mono);
+  font-size: 0.875em;
+  background: var(--ld-sage-100);
+  padding: var(--ld-space-1) var(--ld-space-2);
+  border-radius: var(--ld-radius-sm);
+  color: var(--ld-sage-700);
+}
+
+pre {
+  background: var(--ld-sage-950);
+  color: var(--ld-sage-100);
+  padding: var(--ld-space-4);
+  border-radius: var(--ld-radius);
+  overflow-x: auto;
+  margin-bottom: var(--ld-space-4);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--ld-border);
+  padding-left: var(--ld-space-4);
+  margin-bottom: var(--ld-space-4);
+  font-style: italic;
+  color: var(--ld-text-muted);
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  height: 1px;
+  background: var(--ld-border);
+  margin: var(--ld-space-8) 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--ld-radius);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--ld-space-4);
+}
+
+th, td {
+  padding: var(--ld-space-3) var(--ld-space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--ld-border);
+}
+
+th {
+  font-weight: var(--ld-font-semibold);
+  background: var(--ld-sage-50);
+}
+
+tr:hover {
+  background: var(--ld-hover);
+}
