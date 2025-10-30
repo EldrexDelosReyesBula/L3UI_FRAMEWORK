@@ -1,0 +1,184 @@
+:root {
+  /* ===== COLOR TOKENS ===== */
+  /* Sage Palette */
+  --ld-sage-50: #f8faf9;
+  --ld-sage-100: #f1f4f3;
+  --ld-sage-200: #e4e9e7;
+  --ld-sage-300: #d1d9d5;
+  --ld-sage-400: #a8b8b1;
+  --ld-sage-500: #879a90;
+  --ld-sage-600: #6a7f74;
+  --ld-sage-700: #57685f;
+  --ld-sage-800: #48544d;
+  --ld-sage-900: #3e4742;
+  --ld-sage-950: #252c28;
+
+  /* Semantic Colors */
+  --ld-brand: var(--ld-sage-600);
+  --ld-brand-50: var(--ld-sage-50);
+  --ld-brand-100: var(--ld-sage-100);
+  --ld-brand-200: var(--ld-sage-200);
+  --ld-brand-300: var(--ld-sage-300);
+  --ld-brand-400: var(--ld-sage-400);
+  --ld-brand-500: var(--ld-sage-500);
+  --ld-brand-600: var(--ld-sage-600);
+  --ld-brand-700: var(--ld-sage-700);
+  --ld-brand-800: var(--ld-sage-800);
+  --ld-brand-900: var(--ld-sage-900);
+  --ld-brand-950: var(--ld-sage-950);
+
+  /* Background & Surface */
+  --ld-bg: var(--ld-sage-50);
+  --ld-surface: #ffffff;
+  --ld-surface-elevated: #ffffff;
+  
+  /* Text */
+  --ld-text: var(--ld-sage-900);
+  --ld-text-muted: var(--ld-sage-700);
+  --ld-text-light: var(--ld-sage-400);
+  --ld-text-on-brand: #ffffff;
+  
+  /* Border & Divider */
+  --ld-border: var(--ld-sage-200);
+  --ld-border-strong: var(--ld-sage-300);
+  --ld-divider: rgba(106, 127, 116, 0.12);
+
+  /* Interaction States */
+  --ld-hover: rgba(106, 127, 116, 0.04);
+  --ld-active: rgba(106, 127, 116, 0.08);
+  --ld-focus-ring: rgba(106, 127, 116, 0.28);
+  --ld-overlay: rgba(0, 0, 0, 0.32);
+
+  /* Status Colors */
+  --ld-success: #10b981;
+  --ld-success-light: #d1fae5;
+  --ld-warning: #f59e0b;
+  --ld-warning-light: #fef3c7;
+  --ld-error: #ef4444;
+  --ld-error-light: #fee2e2;
+  --ld-info: var(--ld-brand-600);
+  --ld-info-light: var(--ld-sage-100);
+
+  /* ===== LAYOUT TOKENS ===== */
+  /* Spacing Scale */
+  --ld-space-1: 0.25rem;
+  --ld-space-2: 0.5rem;
+  --ld-space-3: 0.75rem;
+  --ld-space-4: 1rem;
+  --ld-space-5: 1.25rem;
+  --ld-space-6: 1.5rem;
+  --ld-space-8: 2rem;
+  --ld-space-10: 2.5rem;
+  --ld-space-12: 3rem;
+  --ld-space-16: 4rem;
+  --ld-space-20: 5rem;
+  --ld-space-24: 6rem;
+
+  /* Gutter (default spacing unit) */
+  --ld-gutter: var(--ld-space-4);
+
+  /* Border Radius */
+  --ld-radius-sm: 0.5rem;
+  --ld-radius: 1rem;
+  --ld-radius-lg: 1.5rem;
+  --ld-radius-xl: 2rem;
+  --ld-radius-full: 9999px;
+
+  /* ===== TYPOGRAPHY ===== */
+  /* Font Families */
+  --ld-font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ld-font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  --ld-font: var(--ld-font-sans);
+
+  /* Font Sizes */
+  --ld-text-xs: 0.75rem;
+  --ld-text-sm: 0.875rem;
+  --ld-text-base: 1rem;
+  --ld-text-lg: 1.125rem;
+  --ld-text-xl: 1.25rem;
+  --ld-text-2xl: 1.5rem;
+  --ld-text-3xl: 1.875rem;
+  --ld-text-4xl: 2.25rem;
+  --ld-text-5xl: 3rem;
+
+  /* Font Weights */
+  --ld-font-light: 300;
+  --ld-font-normal: 400;
+  --ld-font-medium: 500;
+  --ld-font-semibold: 600;
+  --ld-font-bold: 700;
+
+  /* Line Heights */
+  --ld-leading-tight: 1.25;
+  --ld-leading-snug: 1.375;
+  --ld-leading-normal: 1.5;
+  --ld-leading-relaxed: 1.625;
+
+  /* ===== MOTION TOKENS ===== */
+  /* Timing Functions */
+  --ld-ease-linear: linear;
+  --ld-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ld-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ld-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ld-ease-quick: cubic-bezier(0.22, 1, 0.36, 1);
+  --ld-ease-slow: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ld-ease-spring: cubic-bezier(.18, 1.2, .42, 1);
+  --ld-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Durations */
+  --ld-dur-instant: 80ms;
+  --ld-dur-fast: 160ms;
+  --ld-dur-med: 320ms;
+  --ld-dur-slow: 520ms;
+  --ld-dur-slower: 800ms;
+
+  /* Stagger Delays */
+  --ld-stagger-fast: 40ms;
+  --ld-stagger-med: 80ms;
+  --ld-stagger-slow: 120ms;
+
+  /* ===== ELEVATION ===== */
+  --ld-elev-0: none;
+  --ld-elev-1: 0 1px 2px rgba(62, 71, 66, 0.04), 0 1px 2px rgba(62, 71, 66, 0.06);
+  --ld-elev-2: 0 4px 8px rgba(62, 71, 66, 0.04), 0 2px 4px rgba(62, 71, 66, 0.08);
+  --ld-elev-3: 0 10px 20px rgba(62, 71, 66, 0.06), 0 4px 8px rgba(62, 71, 66, 0.08);
+  --ld-elev-4: 0 20px 40px rgba(62, 71, 66, 0.08), 0 8px 16px rgba(62, 71, 66, 0.1);
+  --ld-elev-5: 0 32px 64px rgba(62, 71, 66, 0.12), 0 12px 24px rgba(62, 71, 66, 0.12);
+
+  /* ===== LAYOUT ===== */
+  --ld-z-dropdown: 1000;
+  --ld-z-sticky: 1020;
+  --ld-z-modal: 1050;
+  --ld-z-popover: 1070;
+  --ld-z-tooltip: 1080;
+  --ld-z-toast: 1090;
+
+  /* Breakpoints */
+  --ld-bp-xs: 480px;
+  --ld-bp-sm: 640px;
+  --ld-bp-md: 768px;
+  --ld-bp-lg: 1024px;
+  --ld-bp-xl: 1280px;
+  --ld-bp-2xl: 1536px;
+
+  /* Container Widths */
+  --ld-container-xs: 480px;
+  --ld-container-sm: 640px;
+  --ld-container-md: 768px;
+  --ld-container-lg: 1024px;
+  --ld-container-xl: 1280px;
+  --ld-container-2xl: 1536px;
+
+  /* ===== COMPONENT SPECIFIC ===== */
+  /* Skeleton */
+  --ld-skel: rgba(106, 127, 116, 0.05);
+  --ld-skel-wave: linear-gradient(
+    90deg,
+    transparent,
+    rgba(106, 127, 116, 0.08),
+    transparent
+  );
+
+  /* Blur */
+  --ld-backdrop-blur: blur(8px);
+}
