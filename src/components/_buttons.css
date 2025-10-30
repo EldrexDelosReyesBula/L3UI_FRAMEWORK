@@ -1,0 +1,198 @@
+/* Base button styles */
+.ld-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ld-space-2);
+  padding: var(--ld-space-3) var(--ld-space-5);
+  border-radius: var(--ld-radius);
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-size: var(--ld-text-base);
+  font-weight: var(--ld-font-medium);
+  line-height: var(--ld-leading-normal);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--ld-dur-fast) var(--ld-ease-quick);
+  will-change: transform;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.ld-btn:focus-visible {
+  outline: 2px solid var(--ld-focus-ring);
+  outline-offset: 2px;
+}
+
+.ld-btn:active {
+  transform: scale(0.98);
+}
+
+.ld-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Button variants */
+.ld-btn--primary {
+  background: var(--ld-brand);
+  color: var(--ld-text-on-brand);
+  border-color: var(--ld-brand);
+}
+
+.ld-btn--primary:hover:not(:disabled) {
+  background: var(--ld-brand-700);
+  border-color: var(--ld-brand-700);
+  filter: brightness(0.95);
+}
+
+.ld-btn--secondary {
+  background: var(--ld-surface);
+  color: var(--ld-text);
+  border-color: var(--ld-border);
+  box-shadow: var(--ld-elev-1);
+}
+
+.ld-btn--secondary:hover:not(:disabled) {
+  background: var(--ld-hover);
+  border-color: var(--ld-border-strong);
+  box-shadow: var(--ld-elev-2);
+}
+
+.ld-btn--ghost {
+  background: transparent;
+  color: var(--ld-brand-600);
+  border-color: transparent;
+}
+
+.ld-btn--ghost:hover:not(:disabled) {
+  background: var(--ld-hover);
+  color: var(--ld-brand-700);
+}
+
+.ld-btn--outline {
+  background: transparent;
+  color: var(--ld-brand-600);
+  border-color: var(--ld-brand-300);
+}
+
+.ld-btn--outline:hover:not(:disabled) {
+  background: var(--ld-brand-50);
+  border-color: var(--ld-brand-400);
+}
+
+.ld-btn--danger {
+  background: var(--ld-error);
+  color: white;
+  border-color: var(--ld-error);
+}
+
+.ld-btn--danger:hover:not(:disabled) {
+  background: #dc2626;
+  border-color: #dc2626;
+  filter: brightness(0.95);
+}
+
+/* Button sizes */
+.ld-btn--sm {
+  padding: var(--ld-space-2) var(--ld-space-3);
+  font-size: var(--ld-text-sm);
+  border-radius: var(--ld-radius-sm);
+}
+
+.ld-btn--lg {
+  padding: var(--ld-space-4) var(--ld-space-6);
+  font-size: var(--ld-text-lg);
+  border-radius: var(--ld-radius);
+}
+
+.ld-btn--xl {
+  padding: var(--ld-space-5) var(--ld-space-8);
+  font-size: var(--ld-text-xl);
+  border-radius: var(--ld-radius);
+}
+
+/* Icon button */
+.ld-btn--icon {
+  padding: var(--ld-space-2);
+  border-radius: var(--ld-radius);
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.ld-btn--icon.ld-btn--sm {
+  width: 2rem;
+  height: 2rem;
+  padding: var(--ld-space-1);
+}
+
+.ld-btn--icon.ld-btn--lg {
+  width: 3rem;
+  height: 3rem;
+  padding: var(--ld-space-3);
+}
+
+/* Loading state */
+.ld-btn--loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.ld-btn__spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: ld-spin 1s linear infinite;
+}
+
+/* Ripple effect */
+.ld-btn__ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(0);
+  animation: ld-ripple var(--ld-dur-med) var(--ld-ease-out);
+  pointer-events: none;
+}
+
+/* Button group */
+.ld-btn-group {
+  display: inline-flex;
+  border-radius: var(--ld-radius);
+  overflow: hidden;
+  box-shadow: var(--ld-elev-1);
+}
+
+.ld-btn-group .ld-btn {
+  border-radius: 0;
+  border-right: 1px solid var(--ld-border);
+  margin: 0;
+}
+
+.ld-btn-group .ld-btn:first-child {
+  border-top-left-radius: var(--ld-radius);
+  border-bottom-left-radius: var(--ld-radius);
+}
+
+.ld-btn-group .ld-btn:last-child {
+  border-right: none;
+  border-top-right-radius: var(--ld-radius);
+  border-bottom-right-radius: var(--ld-radius);
+}
+
+@keyframes ld-ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes ld-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
