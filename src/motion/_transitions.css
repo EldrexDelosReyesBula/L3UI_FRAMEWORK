@@ -1,0 +1,155 @@
+/* Transition utilities */
+.ld-transition-all {
+  transition: all var(--ld-dur-med) var(--ld-ease-in-out);
+}
+
+.ld-transition-colors {
+  transition: color var(--ld-dur-fast) var(--ld-ease-quick), 
+              background-color var(--ld-dur-fast) var(--ld-ease-quick), 
+              border-color var(--ld-dur-fast) var(--ld-ease-quick);
+}
+
+.ld-transition-opacity {
+  transition: opacity var(--ld-dur-fast) var(--ld-ease-out);
+}
+
+.ld-transition-transform {
+  transition: transform var(--ld-dur-med) var(--ld-ease-spring);
+}
+
+.ld-transition-shadow {
+  transition: box-shadow var(--ld-dur-med) var(--ld-ease-spring);
+}
+
+/* Hover transitions */
+.ld-hover-lift {
+  transition: transform var(--ld-dur-med) var(--ld-ease-spring), 
+              box-shadow var(--ld-dur-med) var(--ld-ease-spring);
+}
+
+.ld-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ld-elev-3);
+}
+
+.ld-hover-scale {
+  transition: transform var(--ld-dur-fast) var(--ld-ease-spring);
+}
+
+.ld-hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.ld-hover-glow {
+  transition: box-shadow var(--ld-dur-slow) var(--ld-ease-slow);
+}
+
+.ld-hover-glow:hover {
+  box-shadow: 0 0 20px rgba(106, 127, 116, 0.15);
+}
+
+/* Focus transitions */
+.ld-focus-scale:focus-visible {
+  transform: scale(1.02);
+  transition: transform var(--ld-dur-fast) var(--ld-ease-spring);
+}
+
+.ld-focus-lift:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--ld-elev-2);
+  transition: all var(--ld-dur-fast) var(--ld-ease-spring);
+}
+
+/* Active state transitions */
+.ld-active-press:active {
+  transform: scale(0.98);
+  transition: transform var(--ld-dur-instant) var(--ld-ease-out);
+}
+
+/* Page transitions */
+.ld-page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.ld-page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all var(--ld-dur-slow) var(--ld-ease-spring);
+}
+
+.ld-page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ld-page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all var(--ld-dur-med) var(--ld-ease-in);
+}
+
+/* List item transitions */
+.ld-list-item {
+  transition: all var(--ld-dur-fast) var(--ld-ease-quick);
+}
+
+.ld-list-item-enter {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.ld-list-item-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ld-list-item-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ld-list-item-exit-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+/* Physics-based transitions */
+.ld-spring {
+  transition: all var(--ld-dur-med) var(--ld-ease-spring);
+}
+
+.ld-spring-slow {
+  transition: all var(--ld-dur-slow) var(--ld-ease-spring);
+}
+
+.ld-bounce {
+  transition: all var(--ld-dur-med) var(--ld-ease-bounce);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .ld-transition-all,
+  .ld-transition-colors,
+  .ld-transition-opacity,
+  .ld-transition-transform,
+  .ld-transition-shadow,
+  .ld-hover-lift,
+  .ld-hover-scale,
+  .ld-hover-glow,
+  .ld-focus-scale,
+  .ld-focus-lift,
+  .ld-active-press,
+  .ld-spring,
+  .ld-spring-slow,
+  .ld-bounce {
+    transition: none;
+  }
+  
+  .ld-hover-lift:hover,
+  .ld-hover-scale:hover,
+  .ld-focus-scale:focus-visible,
+  .ld-focus-lift:focus-visible {
+    transform: none;
+  }
+}
