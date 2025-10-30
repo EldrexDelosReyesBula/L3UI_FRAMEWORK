@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3UI Framework</title>
+    <link rel="stylesheet" href="dist/l3ui.css">
+</head>
+<body>
+    <nav class="ld-nav">
+        <div class="ld-nav__container">
+            <a href="#" class="ld-nav__brand">My App</a>
+            <button class="ld-nav__toggle">☰</button>
+            <ul class="ld-nav__items">
+                <li class="ld-nav__item">
+                    <a href="#" class="ld-nav__link ld-nav__link--active">Home</a>
+                </li>
+                <li class="ld-nav__item">
+                    <a href="#" class="ld-nav__link">Features</a>
+                </li>
+                <li class="ld-nav__item">
+                    <a href="#" class="ld-nav__link">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="ld-container ld-container-lg ld-py-8">
+        <div class="ld-animate-fade-up">
+            <h1>Welcome to L3UI</h1>
+            <p class="ld-text-lg ld-text-muted">A modern CSS framework with physics-based motion.</p>
+            
+            <div class="ld-flex ld-gap-4 ld-mt-6">
+                <button class="ld-btn ld-btn--primary">Get Started</button>
+                <button class="ld-btn ld-btn--outline">Learn More</button>
+                <button data-ld-theme-toggle class="ld-btn ld-btn--ghost">Toggle Theme</button>
+            </div>
+        </div>
+
+        <div class="ld-grid-responsive ld-mt-12">
+            <div class="ld-card ld-animate-fade-up" style="animation-delay: 100ms">
+                <div class="ld-card__header">
+                    <h3 class="ld-card__title">Fast & Lightweight</h3>
+                </div>
+                <div class="ld-card__body">
+                    <p>Built with modern CSS features and minimal dependencies.</p>
+                </div>
+            </div>
+            
+            <div class="ld-card ld-animate-fade-up" style="animation-delay: 200ms">
+                <div class="ld-card__header">
+                    <h3 class="ld-card__title">Customizable</h3>
+                </div>
+                <div class="ld-card__body">
+                    <p>Easily customize colors, typography, and components.</p>
+                </div>
+            </div>
+            
+            <div class="ld-card ld-animate-fade-up" style="animation-delay: 300ms">
+                <div class="ld-card__header">
+                    <h3 class="ld-card__title">Accessible</h3>
+                </div>
+                <div class="ld-card__body">
+                    <p>Built with accessibility and best practices in mind.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="dist/l3ui.js"></script>
+    <script>
+        // Customize the theme
+        L3UI.updateBrandColor('#8b5cf6'); // Change to purple
+        L3UI.updateBorderRadius('0.75rem');
+        
+        // Listen for theme changes
+        L3UI.on('themeChange', (event) => {
+            console.log('Theme changed to:', event.detail.theme);
+        });
+    </script>
+</body>
+</html>
