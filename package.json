@@ -1,0 +1,39 @@
+{
+  "name": "l3ui-framework",
+  "version": "1.0.0",
+  "description": "LanDecs UI Theme & Component System - A modular CSS framework with physics-based motion and customizable design tokens",
+  "main": "dist/l3ui.css",
+  "files": [
+    "dist/**/*",
+    "src/**/*"
+  ],
+  "scripts": {
+    "build": "npm run build:css && npm run build:minify",
+    "build:css": "node scripts/build-css.js",
+    "build:minify": "node scripts/minify-css.js",
+    "dev": "npm run build -- --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "design-system",
+    "ui",
+    "components",
+    "theme",
+    "motion",
+    "responsive"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/l3ui-framework"
+  },
+  "devDependencies": {
+    "cssnano": "^5.1.0",
+    "postcss": "^8.4.0",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^14.0.0"
+  }
+}
